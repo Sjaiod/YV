@@ -2,7 +2,7 @@
 import { motion , AnimatePresence} from 'framer-motion';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from react-icons
-import { usePathname, useRouter } from 'next/navigation'; 
+import { usePathname } from 'next/navigation'; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

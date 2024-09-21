@@ -3,22 +3,22 @@ import { motion } from 'framer-motion';
 
 const events = [
   {
-    title: 'Maya',
+    title: 'Project MAYA',
     description: 'This is the first signature event. It’s impactful and has helped thousands of people.',
     image: '/MAYA01.jpg',
   },
   {
-    title: 'Project Chona Piaju',
+    title: 'Project Chauna Piyaju (PCP) ',
     description: 'This is the second signature event. A unique event with lasting contributions to the community.',
     image: '/PCP01.jpg',
   },
   {
-    title: 'MHM',
+    title: 'Menstrual Hygiene Management (MHM)',
     description: 'Third signature event, known for its huge turnout and massive outreach.',
     image: '/MHM01.jpg',
   },
   {
-    title: 'FAW',
+    title: 'Fight against winter (FAW)',
     description: 'The fourth signature event has been a major milestone in supporting underprivileged communities.',
     image: '/Faw01.jpg',
   },

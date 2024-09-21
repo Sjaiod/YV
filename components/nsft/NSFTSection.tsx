@@ -9,8 +9,7 @@ const NSFTSection = () => {
   const [inView, setInView] = useState(false);
   const useCountUp = (end: number, start = 0, duration = 2) => {
     const [count, setCount] = useState(start);
-  
-    useEffect(() => {
+    const countUPPP=()=>{
       let startTime: number | null = null;
   
       const updateCount = (currentTime: number) => {
@@ -29,6 +28,11 @@ const NSFTSection = () => {
       requestAnimationFrame(updateCount);
   
       return () => setCount(start); // Reset on unmount
+    }
+    
+    useEffect(() => {
+      countUPPP(); // Call countUPPP once on mount and reset on unmount
+       // Reset on unmount
     }, [end, start, duration]);
   
     return count;

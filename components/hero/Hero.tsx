@@ -54,12 +54,12 @@ const Hero = () => {
 
         {/* CTA Button */}
         <motion.a 
-          href="/donate"
+          href="/activity"
           className="inline-block px-8 py-4 bg-cyan-500 text-lg font-semibold rounded-full hover:bg-cyan-600 transition-colors"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          Donate
+          Activity
         </motion.a>
       </div>
       

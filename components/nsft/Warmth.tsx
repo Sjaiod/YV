@@ -7,7 +7,7 @@ const Warmth = () => {
     <section className="relative py-16 lg:py-24 overflow-hidden">
       <div
         className="absolute inset-0 bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: 'url("/FAW00.jpg")', backgroundAttachment: 'fixed' }}
+        style={{ backgroundImage: 'url("/FAW00.webp")', backgroundAttachment: 'fixed' }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark transparent overlay */}
       </div>

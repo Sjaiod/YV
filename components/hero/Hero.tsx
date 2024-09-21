@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/Hero.jpg" 
+          src="/Hero.webp" 
           alt="Background Demo"
           className="object-cover w-full h-full opacity-50 rotate-12"
         />

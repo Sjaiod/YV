@@ -10,7 +10,7 @@ const FAWSection = () => {
       {/* Image */}
       <div className="lg:w-1/2">
         <motion.img
-          src="/FAW_BASE.jpg" // Replace with actual image
+          src="/FAW_BASE.webp" // Replace with actual image
           alt="Fight Against Winter"
           className="rounded-lg shadow-lg"
           initial={{ opacity: 0, x: -100 }}

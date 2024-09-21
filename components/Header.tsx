@@ -65,7 +65,7 @@ const Header = () => {
         className="text-3xl font-bold tracking-wider"
         whileHover={{ scale: 1.1 }}
       >
-        <img src="/LOGO.png" className="cursor-pointer w-[35vh]" />
+        <img src="/LOGO.webp" className="cursor-pointer w-[35vh]" />
       </motion.div>
 
       {/* Menu Icon for mobile */}

@@ -16,7 +16,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-2xl font-bold text-white">YouthVoice</h3>
-          <p className="text-gray-400">Let's create the revolution</p>
+          <p className="text-gray-400">Let&apos;s create the revolution</p>
         </motion.div>
 
         <motion.div

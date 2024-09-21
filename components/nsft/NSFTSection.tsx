@@ -3,35 +3,36 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // Custom hook for counting animation
-const useCountUp = (end: number, start = 0, duration = 2) => {
-  const [count, setCount] = useState(start);
 
-  useEffect(() => {
-    let startTime: number | null = null;
-
-    const updateCount = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / (duration * 1000), 1);
-      const newValue = Math.floor(progress * (end - start) + start);
-
-      setCount(newValue);
-
-      if (progress < 1) {
-        requestAnimationFrame(updateCount);
-      }
-    };
-
-    requestAnimationFrame(updateCount);
-
-    return () => setCount(start); // Reset on unmount
-  }, [end, start, duration]);
-
-  return count;
-};
 
 const NSFTSection = () => {
   const [inView, setInView] = useState(false);
+  const useCountUp = (end: number, start = 0, duration = 2) => {
+    const [count, setCount] = useState(start);
+  
+    useEffect(() => {
+      let startTime: number | null = null;
+  
+      const updateCount = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / (duration * 1000), 1);
+        const newValue = Math.floor(progress * (end - start) + start);
+  
+        setCount(newValue);
+  
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        }
+      };
+  
+      requestAnimationFrame(updateCount);
+  
+      return () => setCount(start); // Reset on unmount
+    }, [end, start, duration]);
+  
+    return count;
+  };
 
   const counters = [
     { label: 'Signature Events', number: 4 },

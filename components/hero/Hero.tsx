@@ -38,7 +38,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          Let's create the revolution
+          Let&apos;s create the revolution
         </motion.p>
         <div className="flex items-center justify-center w-full max-w-[150vh] px-4">
   <motion.p 

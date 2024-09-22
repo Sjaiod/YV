@@ -71,7 +71,7 @@ const page = () => {
         <div className="space-y-6">
           <h2 className="text-4xl font-bold text-cyan-500">Our Vision</h2>
           <p className="text-lg text-gray-300">
-            We aim to ensure we live up to the dreams of all who envision a better future for our country. It is our responsibility to contribute to the development of this land, ensuring the dreams of our nation's martyrs are realized.
+            We aim to ensure we live up to the dreams of all who envision a better future for our country. It is our responsibility to contribute to the development of this land, ensuring the dreams of our nation&apos;s martyrs are realized.
           </p>
         </div>
       </motion.div>

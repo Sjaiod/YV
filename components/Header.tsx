@@ -49,7 +49,8 @@ const Header = () => {
     {label:"Home",Url:"/"},
     {label:'About',Url:"/about"},
     {label:"Events",Url:"/events"},
-    {label:"Member",Url:"/member"},
+    {label:"YV",Url:"/youthvoice"},
+    {label:"Projects",Url:"/projects"},
     {label:"Contact",Url:"/contact"},]
   return (
     <motion.header

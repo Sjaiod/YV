@@ -3,6 +3,7 @@ import { motion , AnimatePresence} from 'framer-motion';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from react-icons
 import { usePathname } from 'next/navigation'; 
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +67,7 @@ const Header = () => {
         className="text-3xl font-bold tracking-wider"
         whileHover={{ scale: 1.1 }}
       >
-        <img src="/LOGO.webp" className="cursor-pointer w-[35vh]" />
+        <img src="/LOGO.webp" alt='asd'  className="cursor-pointer w-[35vh]" />
       </motion.div>
 
       {/* Menu Icon for mobile */}

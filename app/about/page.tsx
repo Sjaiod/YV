@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -41,10 +42,10 @@ const page = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <img
+          <Image
             src="/IDK01.webp"
             alt="Our Mission"
-            className="w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-full object-cover rounded-lg shadow-lg" 
           />
         </motion.div>
       </motion.div>

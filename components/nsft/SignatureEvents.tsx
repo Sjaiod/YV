@@ -5,22 +5,22 @@ const events = [
   {
     title: 'Project MAYA',
     description: 'This is the first signature event. It’s impactful and has helped thousands of people.',
-    image: '/MAYA01.jpg',
+    image: '/MAYA01.webp',
   },
   {
     title: 'Project Chauna Piyaju (PCP) ',
     description: 'This is the second signature event. A unique event with lasting contributions to the community.',
-    image: '/PCP01.jpg',
+    image: '/PCP01.webp',
   },
   {
     title: 'Menstrual Hygiene Management (MHM)',
     description: 'Third signature event, known for its huge turnout and massive outreach.',
-    image: '/MHM01.jpg',
+    image: '/MHM01.webp',
   },
   {
     title: 'Fight against winter (FAW)',
     description: 'The fourth signature event has been a major milestone in supporting underprivileged communities.',
-    image: '/Faw01.jpg',
+    image: '/Faw01.webp',
   },
 ];
 

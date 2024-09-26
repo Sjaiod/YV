@@ -42,7 +42,7 @@ const page = () => {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <img
-            src="/IDK01.jpg"
+            src="/IDK01.webp"
             alt="Our Mission"
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />
@@ -63,7 +63,7 @@ const page = () => {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <img
-            src="/ABOUT_MISSOIN.jpg"
+            src="/ABOUT_MISSOIN.webp"
             alt="Our Vision"
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />

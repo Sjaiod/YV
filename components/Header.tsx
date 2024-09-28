@@ -1,14 +1,22 @@
 "use client"
 import { motion , AnimatePresence} from 'framer-motion';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from react-icons
 import { usePathname } from 'next/navigation'; 
 import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [role,setRole]=useState<string>()
   const router = usePathname();
   console.log(router);
+
+  const checkRole=()=>{
+    const roler =localStorage.getItem('role');
+    if (roler){
+      setRole(roler)
+    }
+  }
    
 
   const toggleMenu = () => {
@@ -50,9 +58,13 @@ const Header = () => {
     {label:"Home",Url:"/"},
     {label:'About',Url:"/about"},
     {label:"Events",Url:"/events"},
-    {label:"YV",Url:"/youthvoice"},
     {label:"Projects",Url:"/projects"},
     {label:"Contact",Url:"/contact"},]
+
+    useEffect(() => {
+      checkRole()
+      
+    },[])
   return (
     <motion.header
     style={{background:"rgb(17 24 39 / 18%)"}}
@@ -102,6 +114,36 @@ const Header = () => {
               {item.label}
             </motion.a>
           ))}
+          {!role &&(
+              <motion.a
+              href={`/youthvoice`}
+              className={`text-xl lg:text-lg text-lime-300 transition-colors hover:text-cyan-400 ${
+                router === `/youthvoice`
+                  ? 'text-cyan-500 font-bold' // Active link style
+                  : ''
+              }`}
+              whileHover={{ scale: 1.1 }}
+            >
+              YV
+            </motion.a>
+
+          )}
+          {role &&(
+              <motion.a
+              href={`/youthvoice/dashbord/${role}`}
+              className={`text-xl lg:text-lg text-lime-300 transition-colors hover:text-cyan-400 ${
+                router === `/youthvoice/dashbord/${role}`
+                  ? 'text-cyan-500 font-bold' // Active link style
+                  : ''
+              }`}
+              whileHover={{ scale: 1.1 }}
+            >
+              {role.toLocaleUpperCase()}
+            </motion.a>
+          )
+
+          }
+        
           <motion.a
             href="/donate"
             className={`bg-cyan-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors ${
@@ -138,6 +180,32 @@ const Header = () => {
                   {item.label}
                 </motion.a>
               ))}
+              {!role &&(
+              <motion.a
+                  href={`/youthvoice`}
+                  className={`text-xl lg:text-lg transition-colors text-lime-300 hover:text-cyan-400 ${
+                    router === `/youthvoice`
+                      ? 'text-cyan-500 font-bold' // Active link style
+                      : ''
+                  }`}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  YV
+                </motion.a>
+              )}
+              {role&&(
+                <motion.a
+                href={`/youthvoice/dashbord/${role}`}
+                className={`text-xl lg:text-lg transition-colors text-lime-300 hover:text-cyan-400 ${
+                  router === `/youthvoice/dashbord/${role}`
+                    ? 'text-cyan-500 font-bold' // Active link style
+                    : ''
+                }`}
+                whileHover={{ scale: 1.1 }}
+              >
+                {role.toUpperCase()}
+              </motion.a>
+              )}
               <motion.a
                 href="/donate"
                 className={`bg-cyan-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors ${

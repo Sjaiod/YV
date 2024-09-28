@@ -130,9 +130,9 @@ const Header = () => {
           )}
           {role &&(
               <motion.a
-              href={`/youthvoice/dashbord/${role}`}
+              href={`/youthvoice/dashboard/${role}`}
               className={`text-xl lg:text-lg text-lime-300 transition-colors hover:text-cyan-400 ${
-                router === `/youthvoice/dashbord/${role}`
+                router === `/youthvoice/dashboard/${role}`
                   ? 'text-cyan-500 font-bold' // Active link style
                   : ''
               }`}
@@ -195,9 +195,9 @@ const Header = () => {
               )}
               {role&&(
                 <motion.a
-                href={`/youthvoice/dashbord/${role}`}
+                href={`/youthvoice/dashboard/${role}`}
                 className={`text-xl lg:text-lg transition-colors text-lime-300 hover:text-cyan-400 ${
-                  router === `/youthvoice/dashbord/${role}`
+                  router === `/youthvoice/dashboard/${role}`
                     ? 'text-cyan-500 font-bold' // Active link style
                     : ''
                 }`}

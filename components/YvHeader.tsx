@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -12,10 +13,13 @@ const AdminHeader = () => {
   }, []);
 
   return (
-    <header className="flex justify-between items-center bg-gray-900 p-4 text-white fixed w-full z-10">
-      <h1 className="text-lg">
+    <header className="flex justify-between items-center bg-gray-900 p-4 text-white fixed w-full z-20 lg:ml-64">
+      <h1 className="text-lg max-md:hidden">
         {role ? `${role.charAt(0).toUpperCase() + role.slice(1)} Dashboard` : "Dashboard"}
       </h1>
+      <div className="text-lg text-transparent hidden max-md:flex">
+        {role ? `${role.charAt(0).toUpperCase() + role.slice(1)} Dashboard` : "Dashboard"}
+      </div>
       <Link href="/youthvoice/profile" className="text-sm hover:underline">
         Profile
       </Link>

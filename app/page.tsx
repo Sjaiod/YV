@@ -12,7 +12,7 @@ export default function Home() {
     
     <Header/>
     <main>
-      <Hero/>
+    <Hero/>
       <NSFTSection/>
       <FAWSection/>
       <Warmth/>

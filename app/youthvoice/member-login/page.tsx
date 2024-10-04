@@ -29,15 +29,14 @@ const MemberLogin = () => {
       if (loginData && loginData.data) {
         const { token } = loginData.data;
         
-        // Store the token in cookies
+         //Store the token in cookies
         document.cookie = `token=${token}; path=/`;
+
   
         // Fetch the user's role
-        const roleData = await axios.get(`${API}/api/member/role/`, {
-          headers: { Authorization: `Token ${token}` },
-        });
+       
   
-        const { role } = roleData.data;
+        const { role } = loginData.data;
   
         // Save role in localStorage
         localStorage.setItem('role', role);

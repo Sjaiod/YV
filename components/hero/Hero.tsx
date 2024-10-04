@@ -40,7 +40,7 @@ const Hero = () => {
         >
           Let&apos;s create the revolution
         </motion.p>
-        <div className="flex items-center justify-center w-full max-w-[150vh] px-4">
+        <div className="flex items-center justify-center   px-4">
   <motion.p 
     className="text-xl lg:text-lg mb-8 text-center"
     initial={{ opacity: 0, y: 50 }}

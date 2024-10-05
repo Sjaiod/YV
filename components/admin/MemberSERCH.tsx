@@ -13,7 +13,17 @@ const getCookie = (name: string) => {
   return null;
 };
 
-const MemberCard = ({ member }: { member: any }) => (
+interface Member {
+  id: number;
+  member_name: string;
+  gmail: string;
+  phone: string;
+  facebook: string;
+  instagram: string;
+  role: string;
+}
+
+const MemberCard = ({ member }: { member: Member }) => (
   <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
     <div className="flex items-center justify-between mb-4">
       <div className="text-xl font-semibold text-gray-800">
@@ -49,7 +59,7 @@ const MemberCard = ({ member }: { member: any }) => (
 );
 
 const MemberSearch = () => {
-  const [members, setMembers] = useState<any>([]);
+  const [members, setMembers] = useState<Member[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

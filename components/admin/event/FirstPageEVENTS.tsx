@@ -8,8 +8,17 @@ import DateTimeFormatter from "@/utility/DateTimeFormatter";
 
 // Function to get a specific cookie by name
 
+interface Event {
+  id: number;
+  name: string;
+  description: string;
+  from_date: string; // Date or string based on format
+  to_date: string;   // Date or string
+  place: string;
+  participants: [number];
+}
 
-const EventCard = ({ event }: { event: any }) => (
+const EventCard = ({ event }: { event:Event }) => (
   <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
     <div className="text-xl font-semibold text-gray-800 mb-4">
       {event.name}
@@ -25,7 +34,7 @@ const EventCard = ({ event }: { event: any }) => (
 );
 
 const EventSearch = () => {
-  const [events, setEvents] = useState<any[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

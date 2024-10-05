@@ -33,7 +33,7 @@ const EventSearch = () => {
   const fetchAllEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${API}/api/event/latest/`);
+      const response = await axios.get(`${API}/api/events/latest/`);
       setEvents(response.data);
       setError("");
     } catch (err) {

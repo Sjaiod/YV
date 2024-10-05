@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { Home, Settings, Users, Menu, X } from "lucide-react";
+import { Home, Settings, Users, Menu, CalendarDays, X } from "lucide-react";
+
 import Link from "next/link";
 
 const AdminSidePanel = () => {
@@ -43,9 +44,10 @@ const AdminSidePanel = () => {
               </Link>
             </li>
             <li className="group">
-              <Link href="/admin/settings" className="flex items-center p-4 text-white hover:bg-gray-700">
-                <Settings className="w-5 h-5 mr-3" />
-                Settings
+              <Link href="/youthvoice/dashboard/admin/events" className="flex items-center p-4 text-white hover:bg-gray-700">
+                
+                <CalendarDays className="w-5 h-5 mr-3" />
+                EVENTS
               </Link>
             </li>
           </ul>

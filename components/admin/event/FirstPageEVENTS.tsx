@@ -4,6 +4,7 @@ import axios from "axios";
 import { API } from "@/API";
 import { FaSearch, FaPlus } from "react-icons/fa";
 import Link from "next/link";
+import DateTimeFormatter from "@/utility/DateTimeFormatter";
 
 // Function to get a specific cookie by name
 
@@ -15,7 +16,9 @@ const EventCard = ({ event }: { event: any }) => (
     </div>
     <p className="text-gray-600">{event.description}</p>
     <p className="text-gray-500 mt-2">
-      From: { event.from_date } | To: {event.to_date}
+      From: <DateTimeFormatter fromDate={event.from_date}/> 
+      </p><p>
+       To:<DateTimeFormatter fromDate={event.to_date}/>
     </p>
     <p className="text-gray-500">Place: {event.place}</p>
   </div>

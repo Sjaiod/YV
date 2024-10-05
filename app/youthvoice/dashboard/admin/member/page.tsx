@@ -2,7 +2,6 @@
 import AdminSidePanel from '@/components/admin/AdminSidePanel';
 import AdminHeader from '@/components/YvHeader';
 import React from 'react';
-import RightPanel from '@/components/admin/RightPanle';
 import MemberSearch from '@/components/admin/MemberSERCH';
 
 

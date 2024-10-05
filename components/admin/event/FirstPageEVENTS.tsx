@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API } from "@/API";
-import { FaSearch, FaPlus } from "react-icons/fa";
+import {  FaPlus } from "react-icons/fa";
 import Link from "next/link";
 import DateTimeFormatter from "@/utility/DateTimeFormatter";
 

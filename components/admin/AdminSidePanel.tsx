@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { Home, Settings, Users, Menu, CalendarDays, X } from "lucide-react";
+import { Home, Users, Menu, CalendarDays, X } from "lucide-react";
 
 import Link from "next/link";
 

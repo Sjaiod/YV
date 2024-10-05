@@ -15,7 +15,7 @@ const EventCard = ({ event }: { event: any }) => (
     </div>
     <p className="text-gray-600">{event.description}</p>
     <p className="text-gray-500 mt-2">
-      From: {event.from} | To: {event.to}
+      From: { event.from_date } | To: {event.to_date}
     </p>
     <p className="text-gray-500">Place: {event.place}</p>
   </div>
@@ -27,6 +27,8 @@ const EventSearch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  console.log(events);
+  
   // Get the token from cookies
 
 
@@ -55,6 +57,8 @@ const EventSearch = () => {
       setLoading(false);
     }
   };
+
+  
 
   useEffect(() => {
     fetchAllEvents();

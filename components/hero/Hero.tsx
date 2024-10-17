@@ -1,69 +1,59 @@
 'use client'; 
 import "./style.css"
 import React from 'react'
-import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
 <section className="relative flex items-center justify-center h-screen bg-gray-900 text-white overflow-hidden">
-      
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/Hero.webp" 
-          alt="Background Demo"
-          className="object-cover w-full h-full opacity-50 rotate-12"
-        />
-      </div>
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="/Hero.webp" 
+      alt="Youth Worldwide Foundation Hero" 
+      className="object-cover w-full h-full opacity-70 rotate-3 scale-105"
+    />
+  </div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-90 z-10"></div>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900 z-10"></div>
 
-      {/* Content */}
-      <div className="relative z-20 text-center px-6">
-        {/* Heading */}
-        <motion.h1 
-          className="text-5xl lg:text-7xl font-bold tracking-tight mb-4"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          Youth Worldwide Foundation
-        </motion.h1>
+  {/* Content */}
+  <div className="relative z-20 text-center px-6 max-w-3xl mx-auto">
+    {/* Heading */}
+    <h1
+      className="text-6xl lg:text-8xl font-extrabold tracking-tighter  mb-4 opacity-0 animate-fadeInDown"
+    >
+      Youth&apos;s Voice
+    </h1>
 
-        {/* Subheading */}
-        <motion.p 
-          className="text-xl lg:text-2xl mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          Let&apos;s create the revolution
-        </motion.p>
-        <div className="flex items-center justify-center   px-4">
-  <motion.p 
-    className="text-xl lg:text-lg mb-8 text-center"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7, delay: 0.2 }}
-  >
-    Throughout the last 9 years, we have had the opportunity to organize numerous events that have helped hundreds of people financially, mentally, and physically. If you want to check out our activities, click the button below.
-  </motion.p>
-</div>
+    {/* Subheading */}
+    <p
+      className="text-xl lg:text-2xl mb-6 lg:mb-8 font-light leading-relaxed opacity-0 animate-fadeInUp"
+      style={{ animationDelay: '0.2s' }}
+    >
+      Let&apos;s create the revolution
+    </p>
 
+    {/* Description */}
+    <p
+      className="text-lg lg:text-xl mb-8 text-gray-300 opacity-0 animate-fadeInUp"
+      style={{ animationDelay: '0.4s' }}
+    >
+      Throughout the last 9 years, we have had the opportunity to organize events
+      that have supported hundreds of people, both financially and emotionally. Discover more
+      about our mission below.
+    </p>
 
-        {/* CTA Button */}
-        <motion.a 
-          href="/about"
-          className="inline-block px-8 py-4 bg-cyan-500 text-lg font-semibold rounded-full hover:bg-cyan-600 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          Learn MORE
-        </motion.a>
-      </div>
-      
-    </section>
+    {/* CTA Button */}
+    <a
+      href="/about"
+      className="inline-block px-8 py-4 bg-cyan-500 text-lg font-semibold rounded-full shadow-lg hover:bg-cyan-600 transition transform hover:-translate-y-1 focus:ring-4 focus:ring-cyan-300 opacity-0 animate-fadeInUp"
+      style={{ animationDelay: '0.6s' }}
+    >
+      Learn More
+    </a>
+  </div>
+</section>
   )
 }
 

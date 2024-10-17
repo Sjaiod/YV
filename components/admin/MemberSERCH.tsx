@@ -20,17 +20,25 @@ interface Member {
   phone: string;
   facebook: string;
   instagram: string;
+  profile_pic:string;
   role: string;
 }
 
 const MemberCard = ({ member }: { member: Member }) => (
   <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
-    <div className="flex items-center justify-between mb-4">
-      <div className="text-xl font-semibold text-gray-800">
-        {member.member_name}
-      </div>
-      <div className={`px-2 py-1 rounded-full text-white ${member.role === 'gm' ? 'bg-blue-500' : 'bg-green-500'}`}>
-        <FaUserTag className="inline mr-2" /> {member.role.toUpperCase()}
+    <div className="flex items-center mb-4">
+    <img
+  src={`https://drive.google.com/thumbnail?id=${member.profile_pic}&sz=w1000`} 
+  alt={member.member_name}
+  className="w-16 h-16 rounded-full object-cover mr-4"
+/>
+      <div className="flex-1">
+        <div className="text-xl font-semibold text-gray-800">
+          {member.member_name}
+        </div>
+        <div className={`px-2 py-1 rounded-full text-white ${member.role === 'gm' ? 'bg-blue-500' : 'bg-green-500'}`}>
+          <FaUserTag className="inline mr-2" /> {member.role.toUpperCase()}
+        </div>
       </div>
     </div>
 
@@ -57,7 +65,6 @@ const MemberCard = ({ member }: { member: Member }) => (
     </div>
   </div>
 );
-
 const MemberSearch = () => {
   const [members, setMembers] = useState<Member[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -77,7 +84,7 @@ const MemberSearch = () => {
   const fetchAllMembers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${API}/api/member/allmember/`, axiosConfig);
+      const response = await axios.get(`${API}/api/member/allmember/`);
       setMembers(response.data);
       setError('');
     } catch (err) {

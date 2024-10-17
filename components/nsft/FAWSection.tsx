@@ -1,55 +1,37 @@
-'use client'; 
-import React from 'react'
-import { motion } from 'framer-motion';
-
+'use client';
+import React from 'react';
 
 const FAWSection = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-16">
-    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-6 lg:px-12">
-      {/* Image */}
-      <div className="lg:w-1/2">
-        <motion.img
-          src="/FAW_BASE.webp" // Replace with actual image
-          alt="Fight Against Winter"
-          className="rounded-lg shadow-lg"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        />
+    <section className="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-16 lg:py-24 overflow-hidden">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 lg:px-12">
+        {/* Image */}
+        <div className="lg:w-1/2 mb-8 lg:mb-0">
+          <img
+            src="/FAW_BASE.webp" 
+            alt="Fight Against Winter"
+            className="rounded-lg shadow-lg w-full object-cover"
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="lg:w-1/2 lg:pl-12 text-center lg:text-left">
+          <h1 className="text-4xl lg:text-5xl font-extrabold mb-4">
+            Fight Against Winter
+          </h1>
+          <p className="text-base lg:text-lg leading-relaxed mb-6">
+            Since 2013, we&apos;ve been organizing this signature event, raising funds and distributing blankets and essential commodities all over Bangladesh. With the support of 40,000 volunteers, we&apos;ve helped over 3 lakh people by distributing more than 30,000 blankets.
+          </p>
+          <a
+            href="/events"
+            className="inline-block px-8 py-4 bg-red-600 text-lg font-semibold rounded-full shadow-lg hover:bg-red-700 transition-colors"
+          >
+            Check Our Latest Events
+          </a>
+        </div>
       </div>
-      {/* Text Content */}
-      <div className="lg:w-1/2 lg:pl-16 mt-8 lg:mt-0">
-        <motion.h1
-          className="text-4xl font-bold"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          Fight Against Winter
-        </motion.h1>
-        <motion.p
-          className="text-lg mt-4 leading-relaxed"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-        >
-          One of our signature events is Fight Against Winter, a fundraiser we&apos;ve been organizing since 2013. After collecting the funds, we make distribution camps all over Bangladesh, providing blankets and commodities to those in need. Over the years, we&apos;ve distributed more than 30,000 blankets, helping over 3 lakh people with the help of 40,000 volunteers.
-        </motion.p>
-        <motion.button
-          className="bg-red-600 text-white py-3 px-6 mt-8 rounded-lg shadow hover:bg-red-700 transition-all"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-        >
-          Check OUR LATEST EVENTS
-        </motion.button>
-      </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default FAWSection
-
-
+export default FAWSection;

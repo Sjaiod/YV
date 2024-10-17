@@ -1,18 +1,11 @@
 'use client';
-import { motion } from 'framer-motion';
 
 const ContactUsSection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Contact Form */}
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="space-y-6 transition-transform duration-500 ease-in-out transform hover:-translate-y-1">
           <h2 className="text-4xl font-bold text-cyan-500 mb-4">Get in Touch</h2>
           <form className="space-y-4">
             <div>
@@ -49,18 +42,14 @@ const ContactUsSection = () => {
               Send Message
             </button>
           </form>
-        </motion.div>
+        </div>
 
         {/* Office Location */}
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+        <div className="space-y-6 transition-transform duration-500 ease-in-out transform hover:-translate-y-1">
           <h2 className="text-4xl font-bold text-cyan-500 mb-4">Office Location</h2>
-          <p className="text-gray-400">1st Floor, adjacent Building to Salt & Sugar, 23/2, M.M Ali Road, Opposite of Shilpokola Academy, , Chittagong, Bangladesh</p>
+          <p className="text-gray-400">
+            1st Floor, adjacent Building to Salt & Sugar, 23/2, M.M Ali Road, Opposite of Shilpokola Academy, Chittagong, Bangladesh
+          </p>
           <div className="h-64 w-full rounded-lg overflow-hidden">
             <iframe
               src="https://maps.app.goo.gl/Fw1DkqT21TGYYsiB7"
@@ -70,7 +59,7 @@ const ContactUsSection = () => {
               aria-hidden="false"
             ></iframe>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

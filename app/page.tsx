@@ -7,20 +7,38 @@ import SignatureEvents from "../components/nsft/SignatureEvents";
 import Footer from "@/components/Footer";
 import ContactUsSection from "@/components/nsft/ContactUsSection";
 export default function Home() {
+
+  //  
+  // <Warmth/>
+
+  // <SignatureEvents/>
+  // <ContactUsSection/>
+  // <Footer/>
+{/* 
+  
+        <NSFTSection />
+        
+       
+        
+        
+
+         */}
+
+
+
   return (
     <>
-    
     <Header/>
-    <main>
-    <Hero/>
-      <NSFTSection/>
-      <FAWSection/>
-      <Warmth/>
-      <SignatureEvents/>
-      <ContactUsSection/>
+      <main className="max-w-screen mx-auto">
+        <Hero/>
+        <NSFTSection />  
+        <FAWSection />
+        <Warmth />
+        <SignatureEvents />
+        <ContactUsSection />
+      </main>
       <Footer/>
-
-    </main>
+      
     </>
   );
 }

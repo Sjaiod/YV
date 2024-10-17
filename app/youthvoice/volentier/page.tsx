@@ -4,15 +4,15 @@ import axios from 'axios';
 import { API } from '@/API';
 
 const VolunteerSignup: React.FC = () => {
-  const [name,setName]=useState()
-  const [email,setEmail]=useState()
-  const [phone,setPhone]=useState()
-  const [age,setAge]=useState()
-  const [tshirtSize, setTshirtSize]=useState()
-  const [amount, setAmount]=useState(400)
-  const [bloodGroup, setBloodGroup]=useState()
-  const [error, setError] = useState('');
-  const [loading,setLoading]=useState(false)
+  const [name,setName]=useState<string>()
+  const [email,setEmail]=useState<string>()
+  const [phone,setPhone]=useState<string>()
+  const [age,setAge]=useState<string>()
+  const [tshirtSize, setTshirtSize]=useState<string>()
+  const [amount, setAmount]=useState<number>(400)
+  const [bloodGroup, setBloodGroup]=useState<string>()
+  const [error, setError] = useState<string>('');
+  const [loading,setLoading]=useState<boolean>(false)
 
 
 
@@ -50,7 +50,7 @@ const VolunteerSignup: React.FC = () => {
               name="name"
               id="name"
               value={name}
-              onChange={(e:any)=>{setName(e.target.value)}}
+              onChange={(e)=>{setName(e.target.value)}}
               required
               className="w-full p-2 border bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
@@ -62,7 +62,7 @@ const VolunteerSignup: React.FC = () => {
               name="email"
               id="email"
               value={email}
-              onChange={(e:any)=>{setEmail(e.target.value)}}
+              onChange={(e)=>{setEmail(e.target.value)}}
               required
               className="w-full p-2 border bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
@@ -74,7 +74,7 @@ const VolunteerSignup: React.FC = () => {
               name="phone"
               id="phone"
               value={phone}
-              onChange={(e:any)=>{setPhone(e.target.value)}}
+              onChange={(e)=>{setPhone(e.target.value)}}
               required
               className="w-full p-2 border bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
@@ -86,7 +86,7 @@ const VolunteerSignup: React.FC = () => {
               name="age"
               id="age"
               value={age}
-              onChange={(e:any)=>{setAge(e.target.value)}}
+              onChange={(e)=>{setAge(e.target.value)}}
               required
               className="w-full p-2 border bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
@@ -97,7 +97,7 @@ const VolunteerSignup: React.FC = () => {
               name="tshirtSize"
               id="tshirtSize"
               value={tshirtSize}
-              onChange={(e:any)=>{setTshirtSize(e.target.value)}}
+              onChange={(e)=>{setTshirtSize(e.target.value)}}
               required
               className="w-full p-2 bg-gray-700 text-white border rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
@@ -114,7 +114,7 @@ const VolunteerSignup: React.FC = () => {
               name="bloodGroup"
               id="bloodGroup"
               value={bloodGroup}
-              onChange={(e:any)=>{setBloodGroup(e.target.value)}}
+              onChange={(e)=>{setBloodGroup(e.target.value)}}
               required
               className="w-full p-2 bg-gray-700 text-white border rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >

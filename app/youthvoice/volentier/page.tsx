@@ -19,6 +19,7 @@ const VolunteerSignup: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      setAmount(400)
       setLoading(true)
       const response=await axios.post(`${API}/api/vol/payment/create/`,{
         name,email,phone,age,bloodGroup,tshirtSize,amount

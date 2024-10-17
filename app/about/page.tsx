@@ -12,7 +12,7 @@ const Page = () => {
         <div className="max-w-5xl mx-auto mb-20 text-center">
           <h1 className="text-5xl font-bold text-cyan-500 mb-6">About Us</h1>
           <p className="text-xl leading-relaxed text-gray-300">
-            We are a non-profit organization looking to empower today's youth to bring reforms in every damaged sector of our country. We believe many national problems can be solved by raising awareness among the masses.
+            We are a non-profit organization looking to empower today&apos;s youth to bring reforms in every damaged sector of our country. We believe many national problems can be solved by raising awareness among the masses.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const Page = () => {
           <div className="">
             <h2 className="text-4xl font-bold text-cyan-500">Our Vision</h2>
             <p className="text-lg text-gray-300">
-              We aim to ensure we live up to the dreams of all who envision a better future for our country. It is our responsibility to contribute to the development of this land, ensuring the dreams of our nation's martyrs are realized.
+              We aim to ensure we live up to the dreams of all who envision a better future for our country. It is our responsibility to contribute to the development of this land, ensuring the dreams of our nation&apos;s martyrs are realized.
             </p>
           </div>
         </div>

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import { redirect, RedirectType, useRouter } from 'next/navigation';
 import axios from 'axios';
 import { API } from '@/API';
 
@@ -13,7 +12,6 @@ const VolunteerSignup: React.FC = () => {
   const [amount, setAmount]=useState(400)
   const [bloodGroup, setBloodGroup]=useState()
   const [error, setError] = useState('');
-  const router = useRouter();
   const [loading,setLoading]=useState(false)
 
 

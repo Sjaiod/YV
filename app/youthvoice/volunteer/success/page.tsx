@@ -1,4 +1,5 @@
 "use client";
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link';
 import { HiHome } from 'react-icons/hi';
@@ -15,7 +16,7 @@ const SuccessContent = () => {
       <p className="text-gray-600 mb-6">Your transaction ID is <span className="font-mono text-green-600">{trxId}</span>.</p>
 
       <Link href="/" className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
-        <HomeIcon className="h-6 w-6" aria-hidden="true" />
+        <HiHome className="h-6 w-6" aria-hidden="true" />
         <span>Return to Home</span>
       </Link>
     </div>

@@ -119,7 +119,7 @@ const VolunteerSignup: React.FC = () => {
               required
               className="w-full p-2 bg-gray-700 text-white border rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
-              <option value="">Select Blood Group</option>
+              <option value="">Select Food TYPE</option>
               <option value="veg">Vegetarian</option>
               <option value="non-veg">Non-Vegetarian</option>
             </select>

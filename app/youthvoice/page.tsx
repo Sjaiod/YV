@@ -10,7 +10,7 @@ const YouthVoicePage = () => {
   };
 
   const handleVolunteerClick = () => {
-    router.push('/youthvoice/volunteer-info'); // Replace this with your volunteer info route
+    router.push('/youthvoice/volunteer'); // Replace this with your volunteer info route
   };
 
   return (

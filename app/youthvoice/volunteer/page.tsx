@@ -10,7 +10,7 @@ const VolunteerSignup: React.FC = () => {
   const [age,setAge]=useState<string>()
   const [tshirtSize, setTshirtSize]=useState<string>()
   const [amount, setAmount]=useState<number>(400)
-  const [bloodGroup, setBloodGroup]=useState<string>()
+  const [food, setFood]=useState<string>()
   const [error, setError] = useState<string>('');
   const [loading,setLoading]=useState<boolean>(false)
 
@@ -22,7 +22,8 @@ const VolunteerSignup: React.FC = () => {
       setAmount(400)
       setLoading(true)
       const response=await axios.post(`${API}/api/vol/payment/create/`,{
-        name,email,phone,age,bloodGroup,tshirtSize,amount
+
+        name,email,phone,age,food,"tshirt_size":tshirtSize,amount
       })
       if(response.status==200){
         const res=response.data
@@ -109,24 +110,18 @@ const VolunteerSignup: React.FC = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label className="block mb-1" htmlFor="bloodGroup">Blood Group</label>
+            <label className="block text-white mb-1" htmlFor="Food">Food Type</label>
             <select
-              name="bloodGroup"
-              id="bloodGroup"
-              value={bloodGroup}
-              onChange={(e)=>{setBloodGroup(e.target.value)}}
+              name="Food"
+              id="food"
+              value={food}
+              onChange={(e)=>{setFood(e.target.value)}}
               required
               className="w-full p-2 bg-gray-700 text-white border rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
               <option value="">Select Blood Group</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
+              <option value="veg">Vegetarian</option>
+              <option value="non-veg">Non-Vegetarian</option>
             </select>
           </div>
           <p className='text-white font-bold my-1'>Fee 400TK</p>

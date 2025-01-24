@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API } from '@/API';
-import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaUserTag } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhone} from 'react-icons/fa';
 import { Card, Dropdown } from "flowbite-react";
 
 // Function to get a specific cookie by name (only runs in the browser)

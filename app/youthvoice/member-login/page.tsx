@@ -30,7 +30,7 @@ const MemberLogin = () => {
         const { token } = loginData.data;
         
          //Store the token in cookies
-        document.cookie = `token=${token}; path=/`;
+        localStorage.setItem('token', token)
 
   
         // Fetch the user's role

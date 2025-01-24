@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { Home, Users, Menu, CalendarDays, X } from "lucide-react";
+import { Home, Users,User, Menu, CalendarDays, X } from "lucide-react";
 
 import Link from "next/link";
 
@@ -29,10 +29,10 @@ const AdminSidePanel = () => {
         <div className="flex items-center justify-center h-16 border-b border-gray-700">
           <h1 className="text-white text-lg">Admin Dashboard</h1>
         </div>
-        <nav className="mt-5">
+        <nav className="mt-5 flex flex-col h-[90vh] justify-between">
           <ul>
             <li className="group">
-              <Link href="/admin/dashboard" className="flex items-center p-4 text-white hover:bg-gray-700">
+              <Link href="/youthvoice/dashboard/admin" className="flex items-center p-4 text-white hover:bg-gray-700">
                 <Home className="w-5 h-5 mr-3" />
                 Dashboard
               </Link>
@@ -48,6 +48,21 @@ const AdminSidePanel = () => {
                 
                 <CalendarDays className="w-5 h-5 mr-3" />
                 EVENTS
+              </Link>
+            </li>
+            <li className='group'>
+              <Link href="/youthvoice/dashboard/admin/profile" className="flex items-center p-4 text-white hover:bg-gray-700">
+              <User className="w-5 h-5 mr-3" />
+              PROFILE
+              
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li className="group">
+              <Link href="/logout" className="flex items-center p-4 text-white hover:bg-gray-700">
+                <X className="w-5 h-5 mr-3" />
+                Logout
               </Link>
             </li>
           </ul>

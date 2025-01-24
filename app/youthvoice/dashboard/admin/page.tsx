@@ -1,7 +1,9 @@
+"use client"
 import AdminSidePanel from '@/components/admin/AdminSidePanel';
 import RightPanel from '@/components/admin/RightPanle';
 import AdminHeader from '@/components/YvHeader';
 import React from 'react';
+import MemberSearch from '@/components/admin/MemberSERCH';
 
 const AdminPage = () => {
   return (
@@ -15,7 +17,7 @@ const AdminPage = () => {
         <AdminHeader />
 
         {/* Right Panel */}
-        <RightPanel />
+        <MemberSearch/>
       </div>
     </div>
   );

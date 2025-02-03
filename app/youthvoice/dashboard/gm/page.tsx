@@ -1,12 +1,25 @@
-import React from 'react'
+"use client"
+import AdminSidePanel from '@/components/admin/AdminSidePanel';
+import AdminHeader from '@/components/YvHeader';
+import React from 'react';
+import MemberSearch from '@/components/admin/MemberSERCH';
 
-const page = () => {
+const AdminPage = () => {
   return (
-    <div className='text-white'>
-      This is the dashbord for GenaralMEMBER
-      <p className='text-lime-400'>Under development</p>
-    </div>
-  )
-}
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <AdminSidePanel />
 
-export default page
+      {/* Main content */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <AdminHeader />
+
+        {/* Right Panel */}
+        <MemberSearch/>
+      </div>
+    </div>
+  );
+};
+
+export default AdminPage;

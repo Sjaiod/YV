@@ -3,7 +3,6 @@
 import { API } from '@/API';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { FaCamera } from 'react-icons/fa';
 
 interface MemberData {
@@ -22,7 +21,6 @@ const Profile: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [editMode, setEditMode] = useState<boolean>(false);
   const [formData, setFormData] = useState<Partial<MemberData>>({});
-  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -55,6 +53,8 @@ const Profile: React.FC = () => {
     if (e.target.files) {
       const file = e.target.files[0];
       setSelectedFile(file);
+      console.log(selectedFile);
+      
       await handleUpload(file);
     }
   };
